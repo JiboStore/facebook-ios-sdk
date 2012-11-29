@@ -15,7 +15,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
+#import "FacebookSDK.h"
 
 // FBSample logic
 // Wraps an Open Graph object (of type "scrumps:meal") that has just two properties,

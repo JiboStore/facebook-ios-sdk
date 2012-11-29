@@ -16,7 +16,7 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
-#import <FacebookSDK/FacebookSDK.h>
+#import "FacebookSDK.h"
 
 typedef void(^SelectItemCallback)(id sender, id selectedItem);
 
