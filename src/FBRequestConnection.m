@@ -906,16 +906,16 @@ typedef enum FBRequestConnectionState {
                         data:(NSData *)data
                      orError:(NSError *)error
 {
-    NSAssert(self.state == kStateStarted,
-             @"Unexpected state %d in completeWithResponse",
-             self.state);
+//    NSAssert(self.state == kStateStarted,
+//             @"Unexpected state %d in completeWithResponse",
+//             self.state);
     self.state = kStateCompleted;
 
     int statusCode;
     if (response) {
-        NSAssert([response isKindOfClass:[NSHTTPURLResponse class]],
-                 @"Expected NSHTTPURLResponse, got %@",
-                 response);
+//        NSAssert([response isKindOfClass:[NSHTTPURLResponse class]],
+//                 @"Expected NSHTTPURLResponse, got %@",
+//                 response);
         self.urlResponse = (NSHTTPURLResponse *)response;
         statusCode = self.urlResponse.statusCode;
         
@@ -1190,7 +1190,7 @@ typedef enum FBRequestConnectionState {
                 if ([parsedResponse count]) {
                     newValue = [parsedResponse objectAtIndex:0];
                 }
-                itemError = [self errorWithCode:itemError.code
+                itemError = [self errorWithCode:(FBErrorCode)itemError.code
                                      statusCode:[[itemError.userInfo objectForKey:FBErrorHTTPStatusCodeKey] intValue]
                              parsedJSONResponse:newValue
                                      innerError:[itemError.userInfo objectForKey:FBErrorInnerErrorKey]

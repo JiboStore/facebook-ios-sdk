@@ -166,8 +166,8 @@
                 }
             };
                 
-        NSString *template = @"%@/%@/picture?%@";     
-        NSString *urlString = [NSString stringWithFormat:template, 
+        NSString *templates = @"%@/%@/picture?%@";
+        NSString *urlString = [NSString stringWithFormat:templates,
                                FBGraphBasePath,
                                self.profileID, 
                                newImageQueryParamString];

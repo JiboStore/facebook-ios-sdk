@@ -34,8 +34,7 @@
 		B9CD0A96150EBF5400560A93 /* SCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9CD0A94150EBF5400560A93 /* SCLoginViewController.m */; };
 		B9CD0A97150EBF5400560A93 /* SCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9CD0A95150EBF5400560A93 /* SCLoginViewController.xib */; };
 		B9CD0A9A150EBFFB00560A93 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B9CD0A99150EBFFB00560A93 /* facebook.png */; };
-		DD55EAAF15AB9EDF000A64B8 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD55EAAE15AB9EDF000A64B8 /* FacebookSDK.framework */; };
-		DD55EAB115ABA246000A64B8 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD55EAB015ABA246000A64B8 /* FacebookSDKResources.bundle */; };
+		C3314BA0168ABF9B00B03938 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3314B9F168ABF9B00B03938 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +73,7 @@
 		B9CD0A94150EBF5400560A93 /* SCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginViewController.m; sourceTree = "<group>"; };
 		B9CD0A95150EBF5400560A93 /* SCLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCLoginViewController.xib; sourceTree = "<group>"; };
 		B9CD0A99150EBFFB00560A93 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = images/facebook.png; sourceTree = "<group>"; };
-		DD55EAAE15AB9EDF000A64B8 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../build/FacebookSDK.framework; sourceTree = "<group>"; };
-		DD55EAB015ABA246000A64B8 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKResources.bundle; path = ../../build/FacebookSDK.framework/Versions/A/Resources/FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		C3314B9F168ABF9B00B03938 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../build/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,7 @@
 				B9CD0A76150EA4DD00560A93 /* Foundation.framework in Frameworks */,
 				B9CD0A78150EA4DD00560A93 /* CoreGraphics.framework in Frameworks */,
 				8592BE3D15816CCC00056680 /* AddressBook.framework in Frameworks */,
-				DD55EAAF15AB9EDF000A64B8 /* FacebookSDK.framework in Frameworks */,
+				C3314BA0168ABF9B00B03938 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,11 +116,10 @@
 		B9CD0A72150EA4DD00560A93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3314B9F168ABF9B00B03938 /* FacebookSDK.framework */,
 				85A928E216114706008699F1 /* Social.framework */,
 				B9A416A216113F1C001E7A77 /* AdSupport.framework */,
 				8534B4DE15CC657900348ED2 /* FBUserSettingsViewResources.bundle */,
-				DD55EAB015ABA246000A64B8 /* FacebookSDKResources.bundle */,
-				DD55EAAE15AB9EDF000A64B8 /* FacebookSDK.framework */,
 				84A5DA9515A68A3D00FE54AF /* Accounts.framework */,
 				8592BE3C15816CCC00056680 /* AddressBook.framework */,
 				B9C1C35815129F0E008FA5D1 /* CoreLocation.framework */,
@@ -241,7 +238,6 @@
 				846809C1158F85A100F2DBB9 /* action-eating.png in Resources */,
 				846809C2158F85A100F2DBB9 /* action-location.png in Resources */,
 				846809C3158F85A100F2DBB9 /* action-people.png in Resources */,
-				DD55EAB115ABA246000A64B8 /* FacebookSDKResources.bundle in Resources */,
 				8527EC6815C9DB3800660673 /* Scrumptious.strings in Resources */,
 				8534B4DF15CC657900348ED2 /* FBUserSettingsViewResources.bundle in Resources */,
 				85C69DCA1602B411008AD9A0 /* Default-568h@2x.png in Resources */,
@@ -344,6 +340,7 @@
 		B9CD0A91150EA4DE00560A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -352,6 +349,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scrumptious/Scrumptious-Prefix.pch";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				HEADER_SEARCH_PATHS = "$(SRC_ROOT)/../../src/**";
 				INFOPLIST_FILE = "Scrumptious/Scrumptious-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -366,6 +364,7 @@
 		B9CD0A92150EA4DE00560A93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../build\"",
@@ -373,6 +372,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Scrumptious/Scrumptious-Prefix.pch";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				HEADER_SEARCH_PATHS = "$(SRC_ROOT)/../../src/**";
 				INFOPLIST_FILE = "Scrumptious/Scrumptious-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";

@@ -283,7 +283,7 @@ static FBSession *g_activeSession = nil;
                 // if we have cached an optional refresh date or Facebook Login indicator, pick them up here
                 self.refreshDate = [tokenInfo objectForKey:FBTokenInformationRefreshDateKey];
                 _isFacebookLoginToken = [[tokenInfo objectForKey:FBTokenInformationIsFacebookLoginKey] boolValue];
-                FBSessionLoginType loginType = [[tokenInfo objectForKey:FBTokenInformationLoginTypeLoginKey] intValue];
+                FBSessionLoginType loginType = (FBSessionLoginType)[[tokenInfo objectForKey:FBTokenInformationLoginTypeLoginKey] intValue];
                 _isOSIntegratedFacebookLoginToken = loginType == FBSessionLoginTypeSystemAccount;
                 
                 // set the state and token info
