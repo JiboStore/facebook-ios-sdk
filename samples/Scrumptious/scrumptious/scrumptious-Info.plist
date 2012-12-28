@@ -35,16 +35,18 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb233936543368280</string>
+				<string>fb512087802153324</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>${FB_BUNDLE_VERSION}</string>
 	<key>FacebookAppID</key>
-	<string>233936543368280</string>
+	<string>512087802153324</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
