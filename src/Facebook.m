@@ -386,6 +386,7 @@ static NSString *const FBexpirationDatePropertyName = @"expirationDate";
  * Returns YES if the last time a new token was obtained was over 24 hours ago.
  */
 - (BOOL)shouldExtendAccessToken {
+    NSLog( @"Facebook > shouldExtendAccessToken: last update: %@", _lastAccessTokenUpdate );
     if ([self isSessionValid]){
         NSCalendar *calendar = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
         NSDateComponents *components = [calendar components:NSHourCalendarUnit
@@ -739,6 +740,7 @@ static NSString *const FBexpirationDatePropertyName = @"expirationDate";
  * @return boolean - whether this object has an non-expired session token
  */
 - (BOOL)isSessionValid {
+    NSLog( @"Facebook > %@ : %@", self.accessToken, self.expirationDate );
     return (self.accessToken != nil && self.expirationDate != nil
             && NSOrderedDescending == [self.expirationDate compare:[NSDate date]]);
     

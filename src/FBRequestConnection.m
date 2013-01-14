@@ -418,10 +418,10 @@ typedef enum FBRequestConnectionState {
         FBRequestMetadata *firstMetadata = [self.requests objectAtIndex:0];
         if ([firstMetadata.request delegate]) {
             self.deprecatedRequest = firstMetadata.request;
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+//#pragma GCC diagnostic push
+//#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
             [self.deprecatedRequest setState:kFBRequestStateLoading];
-#pragma GCC diagnostic pop
+//#pragma GCC diagnostic pop
         }
     }
     
