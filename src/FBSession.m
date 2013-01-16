@@ -521,9 +521,9 @@ static FBSession *g_activeSession = nil;
                        completionHandler:(FBSessionStateHandler)handler {
     return [FBSession openActiveSessionWithPermissions:permissions
                                           allowLoginUI:allowLoginUI
-                                    allowSystemAccount:NO
+                                    allowSystemAccount:YES
                                                 isRead:NO
-                                       defaultAudience:FBSessionDefaultAudienceNone
+                                       defaultAudience:FBSessionDefaultAudienceEveryone
                                      completionHandler:handler];
 }
 
